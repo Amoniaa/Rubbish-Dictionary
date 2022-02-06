@@ -1,0 +1,54 @@
+
+/*showOption*/
+@keyframes showOption {
+  0% {
+    opacity: 1;
+    transform: translateX(-100vw);
+    z-index: 999;
+    box-shadow: none;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    z-index: 9999;
+  }
+}
+
+@keyframes hideOption {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+    z-index: 9999;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(-100vw);
+    z-index: 999;
+    box-shadow: none;
+  }
+}
+
+.showOption {
+  animation: showOption .5s ease-out forwards;
+}
+
+.hideOption {
+  animation: hideOption .5s ease-out forwards;
+}
+
+/*option-icon-rotate*/
+@keyframes optionRotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.optionRotate {
+  animation: optionRotate .5s ease-out forwards;
+}
+

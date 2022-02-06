@@ -1,0 +1,52 @@
+
+/*showRecord*/
+@keyframes showRecord {
+  0% {
+    opacity: 0;
+    transform: translateX(100vw);
+    z-index: -1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    z-index: 9999;
+  }
+}
+
+@keyframes hideRecord {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+    z-index: 9999;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(100vw);
+    z-index: -1;
+  }
+}
+
+.showRecord {
+  animation: showRecord .5s ease-out forwards;
+}
+
+.hideRecord {
+  animation: hideRecord .5s ease-out forwards;
+}
+
+/*record-icon-rotate*/
+@keyframes recordRotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.recordRotate {
+  animation: recordRotate .5s ease-out forwards;
+}
+

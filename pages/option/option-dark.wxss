@@ -1,0 +1,27 @@
+@media (prefers-color-scheme: dark) {
+  .option {
+    color: var(--text-dark);
+  }
+
+  .optionbackgroundColor {
+    background-color: var(--background-dark) !important;
+  }
+  
+
+  .active {
+    filter: brightness(90%);
+  }
+
+  .defaultbck {
+    background-color: var(--background-dark-light);
+  }
+
+  .rechoose {
+    background-color: var(--theme-dark);
+    color: var(--text-dark);
+  }
+
+  switch {
+    opacity: .8;
+  }
+}

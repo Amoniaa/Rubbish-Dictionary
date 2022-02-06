@@ -1,0 +1,53 @@
+<!-- option -->
+<!-- <view class="option showOption"> -->
+<view id="option" class="option {{showoption==0? 'hideOption':''}} {{showoption==1? 'showOption':''}}" bindtouchstart="touchStart"
+  bindtouchmove="touchMove" bindtouchend="touchEnd">
+  <view class="navigationText">背景设置</view>
+  <view class="optionbackgroundColor" style="{{'background-color:'+ bckcolor[bckcolorindex]}}"></view>
+  <image class="backgroundImage {{bcktype&&bckindex==1? 'show':'hide'}} {{bckblur? 'blur':''}}"
+    src="{{'../../assets/background/1.jpeg'}}" mode="aspectFill" />
+  <image class="backgroundImage {{bcktype&&bckindex==2? 'show':'hide'}} {{bckblur? 'blur':''}}"
+    src="{{'../../assets/background/2.jpeg'}}" mode="aspectFill" />
+  <image class="backgroundImage {{bcktype&&bckindex==3? 'show':'hide'}} {{bckblur? 'blur':''}}"
+    src="{{'../../assets/background/3.jpeg'}}" mode="aspectFill" />
+  <image class="backgroundImage {{bcktype&&bckindex==4? 'show':'hide'}} {{bckblur? 'blur':''}}" src="{{myimg}}"
+    mode="aspectFill" />
+  <!-- <image class="hide-icon" src="../../assets/icons/hide.svg" catchtap="hideOption" /> -->
+  <view class="optionTitle">
+    纯色背景
+  </view>
+  <view class="optionContent">
+    <view wx:for="{{bckcolor}}" wx:key='index'>
+      <view class="bckcolorpicker {{bckcolorindex==index? 'activecolor':''}}" style="{{'background-color:'+item}}"
+        catchtap="changeBckColor" data-bckcolorindex="{{index}}"></view>
+    </view>
+  </view>
+
+  <view class="optionTitle">默认背景</view>
+
+  <view class="defaultimgs">
+    <view wx:for="{{theme}}" wx:key='*this'>
+      <image class="imgpreview imgitems {{item==bckindex? 'active':''}}"
+        src="{{'../../assets/background/'+ item +'.jpeg'}}" catchtap="changeBck" data-bckindex="{{item}}"
+        wx:if="{{item!=0}}"></image>
+    </view>
+    <view>
+      <view class="chooseimage imgitems" catchtap="chooseimg" wx:if="{{!myimg}}">
+        <image class="chooseicon" src="../../assets/icons/choose.svg" />
+      </view>
+      <image class="imgpreview imgitems {{4==bckindex? 'active':''}}" src="{{myimg}}" mode="aspectFill"
+        catchtap="changeBck" data-bckindex="4" wx:else></image>
+    </view>
+  </view>
+  <view class="optionItem">
+    <view class="section__title">背景模糊</view>
+    <view class="body-view">
+      <switch checked="{{bckblur}}" bindchange="blurChange" color="{{bckblur? 'var(--theme)' : ''}}" />
+    </view>
+  </view>
+  <view class="rechoose {{myimg? 'show': ''}}" catchtap="chooseimg" wx:if="{{myimg}}">自定义背景</view>
+  <view class="version">
+    <view>最近更新日期：2021/6/22</view>
+    <view>版本号：1.2.2</view>
+  </view>
+</view>

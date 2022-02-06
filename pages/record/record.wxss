@@ -1,0 +1,63 @@
+
+
+
+.record {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+  opacity: 0;
+  overflow: scroll;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 3.2vh;
+
+}
+
+.recorditem {
+  /* box-sizing: border-box; */
+  width: 80vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 6vh;
+  line-height: 6vh;
+  padding: 10rpx 10vw;
+  /* background-color: var(--background); */
+  /* background-color: antiquewhite; */
+}
+
+.type {
+  /* background-color: rgb(242, 250, 215); */
+  width: 21vh;
+  /* padding: 0 8vw; */
+  text-align: center;
+  border-radius: 2vh;
+}
+
+.value {
+  width: 55vw;
+}
+
+.tips {
+  font-size: 3vh;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  position: fixed;
+  top: 48vh;
+  transform: translateY(-50%);
+}
+
+
+
+@import "./record-dark.wxss";
+@import "./record-animate.wxss";

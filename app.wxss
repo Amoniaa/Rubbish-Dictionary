@@ -1,0 +1,65 @@
+/**app.wxss**/
+Page {
+  --text: #000000;
+  --text-gray: #888888;
+  --text-dark: #cccccc;
+  --text-light: #ffffff;
+
+  --theme-text: #5F8E00;
+  --theme-text-dark: #80BF00;
+
+  --theme: #80BF00;
+  --theme-dark: #5F8E00;
+
+  --background: #ffffff;
+  --background-dark: #232323;
+  --background-dark-light: #333333;
+
+  font-size: 6vw;
+  line-height: 1.5;
+  vertical-align: middle;
+
+  height: 100%;
+  width: 100%;
+  
+  color: var(--text);
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+image {
+  vertical-align: middle;
+}
+
+.blur {
+  filter: blur(5px);
+}
+
+
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.navigationText {
+  font-size: 5vh;
+  font-weight: 300;
+  display: flex;
+  justify-content: flex-start;
+  width: 90vw;
+  padding: 2vh 10vw;
+}
+
+@import 'app-dark.wxss'

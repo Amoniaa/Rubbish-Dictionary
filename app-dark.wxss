@@ -1,0 +1,36 @@
+/* 
+此文件为开发者工具生成，生成时间: 2021/4/25 上午10:44:19
+使用方法：
+在 app.wxss 文件末尾引入样式
+```
+@import "./app-wxa-auto-dark.wxss";
+```
+ */
+
+@media (prefers-color-scheme: dark) {
+    Page {
+        color: var(--text-dark);
+        /* background-color: var(--background-dark); */
+    }
+
+    image {
+        filter: brightness(80%);
+    }
+
+    image.backgroundImage {
+        filter: brightness(50%);
+    }
+
+    image.blur {
+        filter: brightness(50%) blur(5px);
+    }
+
+    .test {
+        color: var(--text-dark);
+        background-color: var(--theme-dark);
+    }
+
+    ::-webkit-scrollbar {
+        color: rgba(0, 0, 0, 0);
+    }
+}

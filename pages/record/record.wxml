@@ -1,0 +1,14 @@
+<!-- record -->
+<!-- <view class="record showRecord"> -->
+<view id="record" class="record  {{showrecord==0? 'hideRecord':''}} {{showrecord==1? 'showRecord':''}}" catchtouchstart="touchStart" 
+catchtouchmove="touchMove" catchtouchend="touchEnd">
+<!-- <view id="record" class="record  showRecord"> -->
+  <view class="navigationText">历史记录</view>
+  <view class="tips" wx:if="{{!searchRecord.length}}">还没有历史记录哦～</view>
+<view class="list" wx:for="{{searchRecord}}" wx:key='*this'>
+  <view class="recorditem">
+    <view class="value">{{item.value}}</view>
+  <view class="type {{'ccolor'+item.code}}">{{item.data}}</view>
+  </view>
+</view>
+</view>

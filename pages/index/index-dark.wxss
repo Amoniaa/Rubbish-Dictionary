@@ -1,0 +1,81 @@
+
+@media (prefers-color-scheme: dark) {
+    .search {
+        border: none;
+        background-color: rgba(255, 255, 255, .2);
+        color: var(--text-dark);
+    }
+    
+    .logo{
+        filter: brightness(90%);
+    }
+
+    .clear-icon {
+        filter: brightness(100%);
+    }
+
+    .color1 {
+        background-image: linear-gradient(to right, #3a67aa, #0c225a);
+    }
+
+    .color2 {
+        background-image: linear-gradient(to right, #aa4747, #3b0909);
+    }
+
+    .color3 {
+        background-image: linear-gradient(to right, #439140, #042003);
+
+    }
+
+    .color4 {
+        background-image: linear-gradient(to right, #666666, #131313);
+    }
+
+    .ccolor1 {
+        background-image: linear-gradient(to right bottom, #516379, #1f3150);
+    }
+
+    .ccolor2 {
+        background-image: linear-gradient(to right bottom, #835d5d, #531b1b);
+    }
+
+    .ccolor3 {
+        background-image: linear-gradient(to right bottom, #486948, #114410);
+    }
+
+    .ccolor4 {
+        background-image: linear-gradient(to right bottom, #575656, #1d1c1c);
+    }
+
+    .fcolor2 {
+        color: #ce4242;
+      }
+
+    .fcolor4 {
+        color: #868686;
+    }
+
+    .card-header {
+        color: var(--text-dark);
+    }
+
+    .cycle {
+        filter: brightness(80%);
+    }
+
+    .cook {
+        filter: brightness(80%);
+    }
+
+    .other {
+        filter: brightness(100%);
+    }
+
+    .dangerous {
+        filter: brightness(60%);
+    }
+
+    .background {
+        background-color: var(--background-dark) !important;
+    }
+}
